@@ -1,0 +1,135 @@
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left {
+    width: 20%;
+    background-color: #CEEBFF;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ffffff; /* Viền trắng 1px xung quanh */
+    display: flex;
+    flex-direction: column;
+}
+
+.right {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.row1 {
+    height: 1%;
+    background-color: #CEEBFF;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ffffff; /* Viền trắng 1px xung quanh */
+}
+
+.row2 {
+    height: 99%;
+    background-color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ffffff; /* Viền trắng 1px xung quanh */
+}
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Để loại bỏ padding khi sử dụng width */
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.otp-button {
+    background-color: #007BFF; /* Màu đỏ cho nút Gửi lại OTP */
+    color: white;
+    width: 100px;
+    margin-left: auto;
+}
+.pdf-button {
+    background-color: #007BFF; /* Màu đỏ cho nút Gửi lại OTP */
+    color: white;
+    width: 100px;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.submit-button {
+    background-color: #007BFF; /* Màu xanh cho nút Tra cứu tài liệu */
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8; /* Hiệu ứng mờ khi di chuột qua nút */
+}
+
+.email-check,.code-check,.otp-check{
+    font-size: 14px;
+    color: #f44336; /* Màu đỏ để nổi bật thông báo lỗi */
+    margin-top: 5px; /* Khoảng cách trên */
+    margin-bottom: 10px; /* Khoảng cách dưới */
+    padding: 5px; /* Khoảng cách trong */
+    border-radius: 4px; /* Bo tròn các góc */
+    background-color: #fbe9e7; /* Màu nền nhạt để làm nổi bật thông báo */
+    border: 1px solid #f44336; /* Đường viền màu đỏ để nổi bật thông báo */
+}
+.email-check small, .code-check small, .otp-check small {
+    display: block; /* Hiển thị các thông báo lỗi dưới dạng khối */
+    margin: 5px 0; /* Khoảng cách trên và dưới các thông báo lỗi */
+}
+.form-group input.ng-invalid.ng-dirty,
+.form-group input.ng-invalid.ng-touched {
+    border-color: #f44336; /* Đổi màu viền trường nhập liệu khi có lỗi */
+}
+.success-check {
+    font-size: 14px;
+    color: #4CAF50; /* Màu xanh lá để làm nổi bật thông báo thành công */
+    margin-top: 5px; /* Khoảng cách trên */
+    margin-bottom: 10px; /* Khoảng cách dưới */
+    padding: 5px; /* Khoảng cách trong */
+    border-radius: 4px; /* Bo tròn các góc */
+    background-color: #dff0d8; /* Màu nền nhạt để làm nổi bật thông báo */
+    border: 1px solid #4CAF50; /* Đường viền màu xanh lá để làm nổi bật thông báo */
+}
+.display-block{
+    display: block;
+}
+.logo {
+    text-align: center;
+    margin-bottom: 30px; /* Khoảng cách dưới logo */
+    margin-top: -30px; /* Đẩy logo lên cao hơn, điều chỉnh giá trị tùy theo yêu cầu */
+}
+  
+  .logo-img {
+    width: 80px; /* Điều chỉnh kích thước logo nhỏ hơn */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Căn giữa logo */
+  }

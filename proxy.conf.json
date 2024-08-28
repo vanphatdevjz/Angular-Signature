@@ -1,0 +1,8 @@
+{
+    "/api": {
+      "target": "https://api-vssign.v-soft.vn",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }

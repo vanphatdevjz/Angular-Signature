@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="left">
+    <div class="logo">
+      <img src="assets/img/logo.png" alt="Logo" class="logo-img">
+    </div>
+    <form [formGroup]="checkF">
+      <div class="form-group">
+        <label for="documentCode">Mã tra cứu *</label>
+        <input type="text" id="documentCode" name="documentCode" formControlName="documentCode" required>
+        <div class="code-check"
+          *ngIf="checkF['controls']['documentCode'].dirty && checkF['controls']['documentCode'].errors">
+          <small *ngIf="checkF['controls']['documentCode'].errors['required']">Mã tra cứu này không được để trống
+          </small>
+          <small *ngIf="checkF['controls']['documentCode'].errors['maxlength']">Mã tra cứu không được dài quá 512 ký tự</small>
+          <!-- <small *ngIf="checkF['controls']['documentCode'].errors['pattern']">Mã tra cứu chưa định dạng đúng (gồm cả chữ
+            số)</small> -->
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" formControlName="email" class="form-control"  >
+        <div class="email-check" *ngIf="checkF['controls']['email'].dirty && checkF['controls']['email'].errors">
+          <small *ngIf="checkF['controls']['email'].errors['maxlength']">Email không được dài quá 64 ký tự</small>
+          <small *ngIf="checkF['controls']['email'].errors['email']">Email chưa định dạng đúng
+            (myname&#64;gmail.com)</small>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="otp">OTP</label>
+        <input type="text" id="otp" name="otp" formControlName="otp">
+      </div>
+      <div class="form-group">
+        <button type="button" id="resend-otp" class="otp-button" (click)="resendOtp()">Gửi lại OTP</button>
+        <button type="submit" id="submit" class="submit-button" (click)="onSave()">Tra cứu tài liệu</button>
+      </div>
+    </form>
+  </div>
+  <div class="right">
+    
+    <!-- <div class="row1">
+      <button type="button" class="pdf-button" (click)="downloadPdf()">Tải file PDF</button>
+      <button type="button" class="pdf-button" (click)="printPdf()">In</button>
+    </div> -->
+    <div class="row2">
+      <ng2-pdfjs-viewer *ngIf="pdfData" [pdfSrc]="pdfData"></ng2-pdfjs-viewer>
+    </div>
+  </div>
+</div>
